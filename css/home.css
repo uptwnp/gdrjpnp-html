@@ -315,57 +315,48 @@
 /* ==== Form POP: on click form pop up ==== */
 
 .btn-click-open-form-section{
-    display: block;
-    top: 100%;
-    /* transition: all 0.1s ease-in-out; */
+    display: none;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
 
+.btn-click-bg-overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease-in-out;
 }
-.check{
-    transform: scaleY(1);
-    /* transition: all 0.4s ease-in-out; */
-    display:inline-block;
-    margin-left: -150px;
-    margin-bottom: -100vh;
-}
-.check.mystyle{
-    transform: scaleX(1);
-    /* transition: all 0.1s ease-in-out; */
-    margin-left: 0;
-    margin-bottom: 0;
-}
-.btn-click-bg-transpernt{
-    background-color: #000000bb;
-    display: none; 
-    /* transition: all 0.1s ease-in-out; */
-    /* transition-delay: 1s; */
-}
+
 .btn-click-form{
     top: 100%;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
+
 .btn-click-open-form-section{
-    z-index: 10;
+    z-index: 50;
 }
+
 .mystyle{
     display: block;
     top: 0;
 }
-.mystyle .btn-click-bg-transpernt{
-    display: block;
-}
+
 .mystyle .btn-click-form {
     top: 25%;
-    transition: all 0.1s ease-in-out;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 }   
 
 @media (max-width:624px){
-    .mystyle{
-        bottom: 100px;
-    }
     .btn-click-form{
         top: 30%;
-        bottom:0%;
         left: 2%;
-        transform: scale(0);
+        width: 96%;
+        max-width: 100%;
+        transform: scale(0.9);
+        opacity: 0;
     }
     .mystyle .btn-click-form{
         top: 30%;
@@ -376,9 +367,8 @@
         max-width: 100%;
         padding: 25px 20px;
         transform: scale(1);
-        transition: 0.25s ease-in-out;
-        box-shadow: 1px 2px 6px #b6b4b4;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
-
-
 }
